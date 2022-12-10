@@ -11,6 +11,8 @@ def start():
 def check(sss):
     if (sss[0] + sss[1]) < sss[2] or (sss[1] + sss[2]) < sss[0] or (sss[2] + sss[0]) < sss[1]:
         raise SystemExit("Your triangle can`t exist")
+    else:
+        return True
 
 
 def obvod(sss):
@@ -24,8 +26,10 @@ def obsah(sss, per):
 def check_prav(sss):
     if (sss[0]**2 == sss[1]**2 + sss[2]**2) or (sss[1]**2 == sss[2]**2 + sss[0]**2) or (sss[2]**2 == sss[0]**2 + sss[1]**2):
         print("Trojuhelnik je pravouhly")
+        return True
     else:
         print("Trojuhelnik neni pravouhly")
+        return False
 
 
 def uhly(sss):
